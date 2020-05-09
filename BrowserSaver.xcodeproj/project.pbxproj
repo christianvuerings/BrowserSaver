@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9281DABD24676B3800E8EBC5 /* BrowserSaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9281DABC24676B3800E8EBC5 /* BrowserSaverView.h */; };
-		9281DABF24676B3800E8EBC5 /* BrowserSaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9281DABE24676B3800E8EBC5 /* BrowserSaverView.m */; };
+		9281DAC724676B8A00E8EBC5 /* BrowserSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281DAC624676B8A00E8EBC5 /* BrowserSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9281DAB924676B3800E8EBC5 /* BrowserSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowserSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		9281DABC24676B3800E8EBC5 /* BrowserSaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrowserSaverView.h; sourceTree = "<group>"; };
-		9281DABE24676B3800E8EBC5 /* BrowserSaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowserSaverView.m; sourceTree = "<group>"; };
 		9281DAC024676B3800E8EBC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9281DAC624676B8A00E8EBC5 /* BrowserSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +46,8 @@
 		9281DABB24676B3800E8EBC5 /* BrowserSaver */ = {
 			isa = PBXGroup;
 			children = (
-				9281DABC24676B3800E8EBC5 /* BrowserSaverView.h */,
-				9281DABE24676B3800E8EBC5 /* BrowserSaverView.m */,
 				9281DAC024676B3800E8EBC5 /* Info.plist */,
+				9281DAC624676B8A00E8EBC5 /* BrowserSaver.swift */,
 			);
 			path = BrowserSaver;
 			sourceTree = "<group>";
@@ -62,7 +59,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9281DABD24676B3800E8EBC5 /* BrowserSaverView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +94,7 @@
 				TargetAttributes = {
 					9281DAB824676B3800E8EBC5 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -134,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9281DABF24676B3800E8EBC5 /* BrowserSaverView.m in Sources */,
+				9281DAC724676B8A00E8EBC5 /* BrowserSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,12 +250,20 @@
 		9281DAC424676B3800E8EBC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BrowserSaver/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = christianvuerings.BrowserSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -266,12 +271,19 @@
 		9281DAC524676B3800E8EBC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BrowserSaver/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = christianvuerings.BrowserSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;

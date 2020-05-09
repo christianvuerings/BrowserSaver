@@ -21,6 +21,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 Christian Vuerings. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>BrowserSaverView</string>
+	<string>BrowserSaver.BrowserSaverView</string>
 </dict>
 </plist>
